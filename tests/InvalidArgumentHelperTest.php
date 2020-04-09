@@ -26,7 +26,7 @@ class InvalidArgumentHelperTest extends TestCase
 
         $message = InvalidArgumentHelper::message($arg, $type, $value);
 
-        $this->assertRegExp($expected, $message);
+        $this->assertMatchesRegularExpression($expected, $message);
     }
 
     /**

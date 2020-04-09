@@ -10,8 +10,8 @@
 
 ## Technologies
 
-- PHP 7.2
-- PHPUnit 8
+- PHP 7.3+
+- PHPUnit 9+
 
 ## Installation
 
