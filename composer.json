@@ -4,9 +4,9 @@
     "description": "Add some utilities to test exceptions when using PHPUnit",
     "keywords": [
         "VGirol",
-        "Phpunit-Exception"
+        "PHPUnit-Exception"
     ],
-    "homepage": "https://github.com/VGirol/Phpunit-Exception",
+    "homepage": "https://github.com/VGirol/PHPUnit-Exception",
     "license": "MIT",
     "authors": [
         {

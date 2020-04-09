@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [Github](https://github.com/VGirol/Phpunit-Exception).
+We accept contributions via Pull Requests on [Github](https://github.com/VGirol/PHPUnit-Exception).
 
 Please read and understand the contribution guide before creating an issue or pull request.
 
