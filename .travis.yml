@@ -1,0 +1,42 @@
+dist: bionic
+
+language: php
+php:
+  - 7.3
+  - 7.4snapshot
+
+# This triggers builds to run on the new TravisCI infrastructure.
+# See: http://docs.travis-ci.com/user/workers/container-based-infrastructure/
+# sudo: false
+
+## Cache composer
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+matrix:
+  fast_finish: true
+
+before_script:
+  - travis_retry composer self-update
+  - travis_retry composer install ${COMPOSER_FLAGS} --no-interaction --prefer-dist
+  - mkdir -p build/coverage
+
+script:
+  - composer travis
+
+after_script:
+  - |
+    if [[ "$TRAVIS_PHP_VERSION" != 'hhvm' ]]; then
+      wget https://scrutinizer-ci.com/ocular.phar
+      php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/clover.xml
+    fi
+
+notifications:
+  on_success: never
+  on_failure: always
+
+env:
+  global:
+    # secure key for infection badge (see https://infection.github.io/guide/mutation-badge.html)
+    secure: F6A2+4pyGCTCxcp9Fj55Y9j+7uUfa96KsZb/q1LDafFd0D18/eAgbuJnN9qQhkq5hOYQ5iblmjWZBl9xN6QQwrar9jUU06nw3Wk2VkxCmNCONMw0J9OfW5APpnHRUfJo2FwZ3U+D8rRurGuS9n6ph52RrIirTGhewAlezzfOxuyovqajZXwOkdfRU9ufvGu6Ojo/uoZSRcHEIPOTx9tljq194glJAfpZFbMfFY1ASZqs4UCBolJwqytIXCQAk5LuPkDMA/gO8+qDWAar9MWB3TWPB9IvGNvLloY4k0nWiHAj0R6tei6Knh7uzsblLdv9040+IXVDnFkGNv7Jl0DptVNfOX21ZpStDYuy91NHQfNXqWWgaSsIkZcU5m209ssHQoXCmdE5z5gmdjPNPCSleW1cgNca+9aLVjf8gb5S+QrTrzwOH93GavCFgYyQVuSJzBJcuq00bn8ydk5mu8dcATJ8biPhDBG09G9KCZsCi2PQPuAI/p9OVTymEtTd/HRIPzyV0mkQe2q7VJqgFBMGVgK/FcFhatFZxIsTH0Gd6w1U5WxZ4BMjjCNhEC6YDxEaQwVDdKNAhEVsRWIAMyAAyx798irgehrrgXTigYVlnnCXYTEInsry3wOO4W1GFVNMmyja+yHrdbUBQ/XWekwg8mdCw4sQ0De05HExQ74clSs=
