@@ -21,7 +21,7 @@
         "phpunit/phpunit": "^9.0"
     },
     "require-dev": {
-        "infection/infection": "^0.14"
+        "infection/infection": "~0.14"
     },
     "minimum-stability": "stable",
     "autoload": {
@@ -51,7 +51,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "2.0-dev"
         }
     },
     "config": {
