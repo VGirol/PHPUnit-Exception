@@ -20,7 +20,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
     "require-dev": {
-        "VGirol/Phpunit-Exception": "dev-master"
+        "vgirol/phpunit-exception": "dev-master"
     }
 }
 ```
