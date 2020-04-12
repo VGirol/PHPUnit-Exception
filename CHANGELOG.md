@@ -9,3 +9,9 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Added
 
 - first release
+
+## 1.0.1 - 2020-04-12
+
+### Added
+
+- minor fixes
