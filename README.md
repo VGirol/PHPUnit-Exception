@@ -60,7 +60,7 @@ class TestCase extends BaseTestCase
 
 ## Documentation
 
-The API documentation is available in XHTML format at the url [http://Phpunit-Exception.girol.fr/docs/index.xhtml](http://Phpunit-Exception.girol.fr/docs/index.xhtml).
+The API documentation is available in XHTML format at the url [http://Phpunit-Exception.girol.fr/docs/ref/index.html](http://Phpunit-Exception.girol.fr/docs/ref/index.html).
 
 ## Change log
 
