@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace VGirol\PhpunitException\Exception;
 
 /**
- * Factory for VGirol\JsonApiStructure\Exception\InvalidArgumentException
+ * Factory for VGirol\PhpunitException\Exception\InvalidArgumentException
  *
  * @internal
  */
