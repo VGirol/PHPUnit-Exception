@@ -22,3 +22,9 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Added
 
 - Simplify some packages versions
+
+## 2.0.2 - 2021-04-02
+
+### Added
+
+- Change infection configuration
