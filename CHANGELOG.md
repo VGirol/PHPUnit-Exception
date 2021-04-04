@@ -29,7 +29,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 - Change infection configuration
 
-## 2.0.3 - 2021-04-04
+## 2.1.0 - 2021-04-04
 
 ### Added
 
