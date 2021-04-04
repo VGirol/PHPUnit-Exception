@@ -34,3 +34,9 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Added
 
 - Add support for PHP 8.0
+
+## 2.1.1 - 2021-04-04
+
+### Added
+
+- Change travis config for PHP 8.0 and XDebug 3
